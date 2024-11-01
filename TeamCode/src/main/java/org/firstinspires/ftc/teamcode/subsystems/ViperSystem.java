@@ -21,22 +21,29 @@ public class ViperSystem extends Subsystem{
 
     public void moveOnTick(boolean isUp, boolean isDown){
         double pow = 10;
-        if(isUp){
-            getViper_motor_l().setPower(pow);
-            getViper_motor_r().setPower(pow);
-        }
-        else{
+        if(isUp && isDown){
             getViper_motor_l().setPower(0);
             getViper_motor_r().setPower(0);
         }
-        if(isDown){
-            getViper_motor_l().setPower(-pow);
-            getViper_motor_r().setPower(-pow);
-        }
         else{
-            getViper_motor_l().setPower(0);
-            getViper_motor_r().setPower(0);
+            if(isUp){
+                getViper_motor_l().setPower(pow);
+                getViper_motor_r().setPower(pow);
+            }
+            else{
+                getViper_motor_l().setPower(0);
+                getViper_motor_r().setPower(0);
+            }
+            if(isDown){
+                getViper_motor_l().setPower(-pow);
+                getViper_motor_r().setPower(-pow);
+            }
+            else{
+                getViper_motor_l().setPower(0);
+                getViper_motor_r().setPower(0);
+            }
         }
+
 
     }
 
