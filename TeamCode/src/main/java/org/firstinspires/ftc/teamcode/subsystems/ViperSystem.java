@@ -57,7 +57,7 @@ public class ViperSystem extends Subsystem{
 
 
 
-        viper_motor_l.setDirection(DcMotor.Direction.REVERSE);
+        viper_motor_r.setDirection(DcMotor.Direction.REVERSE);
 
         viper_motor_l.setZeroPowerBehavior(DcMotor.ZeroPowerBehavior.BRAKE);
 
