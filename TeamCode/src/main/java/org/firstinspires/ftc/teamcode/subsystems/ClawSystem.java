@@ -31,18 +31,18 @@ public class ClawSystem extends Subsystem
 
     private  boolean isOpen = true;
     public void setClawPos(double pos){
-        this.claw_left.setPosition(pos);
-        this.claw_right.setPosition(pos);
+        this.claw_servo_l.setPosition(pos);
+        this.claw_servo_r.setPosition(pos);
     }
 
     public void openClaw(){
-        this.claw_left.setPosition(this.OPEN);
-        this.claw_right.setPosition(this.OPEN);
+        this.claw_servo_l.setPosition(this.OPEN);
+        this.claw_servo_r.setPosition(this.OPEN);
     }
 
     public void closeClaw(){
-        this.claw_left.setPosition(this.CLOSE);
-        this.claw_right.setPosition(this.CLOSE);
+        this.claw_servo_l.setPosition(this.CLOSE);
+        this.claw_servo_r.setPosition(this.CLOSE);
     }
 
     public void toggleClaw(boolean toggle){
@@ -63,7 +63,7 @@ public class ClawSystem extends Subsystem
             openChanged = false;
         }
 
-    }s
+    }
 
     public ClawSystem(Routine routine) {
         super(routine);
